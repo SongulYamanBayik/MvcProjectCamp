@@ -59,7 +59,12 @@
     <Compile Include="Abstract\ITittleDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
+    <Compile Include="EntityFramework\EFAboutDal.cs" />
     <Compile Include="EntityFramework\EFCategoryDal.cs" />
+    <Compile Include="EntityFramework\EFContactDal.cs" />
+    <Compile Include="EntityFramework\EFContentDal.cs" />
+    <Compile Include="EntityFramework\EFTittleDal.cs" />
+    <Compile Include="EntityFramework\EFWriterDal.cs" />
     <Compile Include="Migrations\202210201444112_writer-to-content.cs" />
     <Compile Include="Migrations\202210201444112_writer-to-content.designer.cs">
       <DependentUpon>202210201444112_writer-to-content.cs</DependentUpon>
