@@ -1,23 +1,24 @@
 ﻿@model EntityLayer.Concrete.Category
-
 @{
+    ViewBag.Title = "EditCategory";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
 <!DOCTYPE html>
 <div class="container col-10">
 
-    @using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+    @using (Html.BeginForm("EditCategory", "Category", FormMethod.Post))
     {
-
+        @Html.Label("ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+        <br />
         @Html.Label("Kategori Adı")
         @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x=>x.Name)
         <br />
         @Html.Label("Açıklama")
-        @Html.TextAreaFor(x=>x.Description, new {@class="form-control"})
-        @Html.ValidationMessageFor(x=>x.Description)
+        @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
         <br />
 
         <button class="btn btn-info">Kaydet</button>

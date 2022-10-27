@@ -14,5 +14,6 @@ namespace DAL.Abstract
         void Delete(T t);
         void Update(T t);
         List<T> List(Expression<Func<T, bool>> filter);
+        T Get(Expression<Func<T, bool>> filter);
     }
 }

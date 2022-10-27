@@ -11,6 +11,7 @@ namespace MvcProjectCamp.Controllers
         // GET: Admin
         public ActionResult Index()
         {
+            //dashboard yap burayı
             return View();
         }
     }
