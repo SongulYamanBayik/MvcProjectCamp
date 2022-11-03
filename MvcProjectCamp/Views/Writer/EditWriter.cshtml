@@ -1,0 +1,45 @@
+﻿@model EntityLayer.Concrete.Writer
+@{
+    ViewBag.Title = "EditWriter";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<!DOCTYPE html>
+<div class="container col-10" style="margin-top:40px">
+
+    @using (Html.BeginForm("EditWriter", "Writer", FormMethod.Post))
+    {
+
+        @Html.HiddenFor(x => x.ID)
+        <br />
+        @Html.Label("Yazar Adı")
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Name, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Yazar Soyadı")
+        @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Surname, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Yazar Ünvanı")
+        @Html.TextBoxFor(x => x.WriterTitle, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterTitle, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Mail")
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Mail, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Fotoğraf Linki")
+        @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Image, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Hakkında")
+        @Html.TextAreaFor(x => x.About, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.About, "", new { @style = "color:red" })
+        <br />
+        @Html.HiddenFor(x => x.Password)
+        <button class="btn btn-info">Kaydet</button>
+
+    }
+</div>
+

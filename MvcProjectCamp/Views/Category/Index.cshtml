@@ -6,28 +6,30 @@
 }
 @{int sayac = 0; }
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-<table class="table table-bordered">
-    <tr>
-        <th>#</th>
-        <th>Kategori Adı</th>
-        <th>Kategori Açıklama</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
-        <th>Başlıklar</th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        sayac++;
+<div class="container" style="margin-top:40px">
+    <table class="table table-bordered">
         <tr>
-            <th>@sayac</th>
-            <td>@item.Name</td>
-            <td>@item.Description</td>
-            <td><a href="/Category/DeleteCategory/@item.ID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Category/EditCategory/@item.ID" class="btn btn-success">Güncelle</a></td>
-            <td><a href="/Category/AddCategory/" class="btn btn-warning">Başlıklar</a></td>
-           
+            <th>#</th>
+            <th>Kategori Adı</th>
+            <th>Kategori Açıklama</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+            <th>Başlıklar</th>
         </tr>
-    }
+
+        @foreach (var item in Model)
+        {
+            sayac++;
+            <tr>
+                <th>@sayac</th>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td><a href="/Category/DeleteCategory/@item.ID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Category/EditCategory/@item.ID" class="btn btn-success">Güncelle</a></td>
+                <td><a href="/Category/AddCategory/" class="btn btn-warning">Başlıklar</a></td>
+
+            </tr>
+        }
     </table>
-<a href="/Category/AddCategory/" class="btn btn-info">Yeni Kategori Ekle</a>
+    <a href="/Category/AddCategory/" class="btn btn-info">Yeni Kategori Ekle</a>
+</div>

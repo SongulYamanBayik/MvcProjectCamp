@@ -69,6 +69,14 @@
     <Compile Include="Migrations\202210201444112_writer-to-content.designer.cs">
       <DependentUpon>202210201444112_writer-to-content.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211021315258_update-writter.cs" />
+    <Compile Include="Migrations\202211021315258_update-writter.designer.cs">
+      <DependentUpon>202211021315258_update-writter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211031231105_add-WriterTitle-writer.cs" />
+    <Compile Include="Migrations\202211031231105_add-WriterTitle-writer.designer.cs">
+      <DependentUpon>202211031231105_add-WriterTitle-writer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
@@ -86,6 +94,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202210201444112_writer-to-content.resx">
       <DependentUpon>202210201444112_writer-to-content.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211021315258_update-writter.resx">
+      <DependentUpon>202211021315258_update-writter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211031231105_add-WriterTitle-writer.resx">
+      <DependentUpon>202211031231105_add-WriterTitle-writer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
