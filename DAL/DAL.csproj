@@ -56,14 +56,14 @@
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IGenericDal.cs" />
-    <Compile Include="Abstract\ITittleDal.cs" />
+    <Compile Include="Abstract\ITitleDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="EntityFramework\EFAboutDal.cs" />
     <Compile Include="EntityFramework\EFCategoryDal.cs" />
     <Compile Include="EntityFramework\EFContactDal.cs" />
     <Compile Include="EntityFramework\EFContentDal.cs" />
-    <Compile Include="EntityFramework\EFTittleDal.cs" />
+    <Compile Include="EntityFramework\EFTitleDal.cs" />
     <Compile Include="EntityFramework\EFWriterDal.cs" />
     <Compile Include="Migrations\202210201444112_writer-to-content.cs" />
     <Compile Include="Migrations\202210201444112_writer-to-content.designer.cs">
@@ -76,6 +76,18 @@
     <Compile Include="Migrations\202211031231105_add-WriterTitle-writer.cs" />
     <Compile Include="Migrations\202211031231105_add-WriterTitle-writer.designer.cs">
       <DependentUpon>202211031231105_add-WriterTitle-writer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211031258564_rename-title.cs" />
+    <Compile Include="Migrations\202211031258564_rename-title.designer.cs">
+      <DependentUpon>202211031258564_rename-title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211081048526_add-color-in-category.cs" />
+    <Compile Include="Migrations\202211081048526_add-color-in-category.designer.cs">
+      <DependentUpon>202211081048526_add-color-in-category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211081216454_update-ımage-length.cs" />
+    <Compile Include="Migrations\202211081216454_update-ımage-length.designer.cs">
+      <DependentUpon>202211081216454_update-ımage-length.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +112,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211031231105_add-WriterTitle-writer.resx">
       <DependentUpon>202211031231105_add-WriterTitle-writer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211031258564_rename-title.resx">
+      <DependentUpon>202211031258564_rename-title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211081048526_add-color-in-category.resx">
+      <DependentUpon>202211081048526_add-color-in-category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211081216454_update-ımage-length.resx">
+      <DependentUpon>202211081216454_update-ımage-length.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

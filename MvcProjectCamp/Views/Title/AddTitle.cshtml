@@ -1,0 +1,29 @@
+﻿@model EntityLayer.Concrete.Title
+@{
+    ViewBag.Title = "AddTitle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<!DOCTYPE html>
+<div class="container col-10" style="margin-top:40px">
+
+    @using (Html.BeginForm("AddTitle", "Title", FormMethod.Post))
+    {
+
+        @Html.Label("Title Adı")
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <br />
+        @Html.Label("Kategori")
+        @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>) ViewBag.slc, new {@class="form-control"})
+        <br />
+        @Html.Label("Yazar")
+        @Html.DropDownListFor(x=>x.WriterID,(List<SelectListItem>) ViewBag.slw, new {@class="form-control" })
+        <br />
+        <button class="btn btn-info">Kaydet</button>
+
+    }
+</div>
+
+

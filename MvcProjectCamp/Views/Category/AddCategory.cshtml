@@ -4,23 +4,26 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
 <!DOCTYPE html>
-<div class="container col-10">
+<div class="container col-10" style="margin-top:40px">
 
     @using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
     {
 
         @Html.Label("Kategori Adı")
         @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x=>x.Name)
+        @Html.ValidationMessageFor(x => x.Name)
         <br />
         @Html.Label("Açıklama")
-        @Html.TextAreaFor(x=>x.Description, new {@class="form-control"})
-        @Html.ValidationMessageFor(x=>x.Description)
+        @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Description)
         <br />
-
-        <button class="btn btn-info">Kaydet</button>
+        @Html.Label("Kategori Rengi")
+        <br />
+        @Html.TextBoxFor(x => x.Color, new { @class = "form-control-color", @type = "color" })
+        <br />
+        <button class="btn btn-info mt-3" type="submit">Kaydet</button>
 
     }
 </div>

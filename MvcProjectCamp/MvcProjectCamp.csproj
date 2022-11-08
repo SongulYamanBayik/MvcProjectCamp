@@ -141,6 +141,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TitleController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2280,6 +2281,8 @@
     <Content Include="Views\Writer\Index.cshtml" />
     <Content Include="Views\Writer\AddWriter.cshtml" />
     <Content Include="Views\Writer\EditWriter.cshtml" />
+    <Content Include="Views\Title\Index.cshtml" />
+    <Content Include="Views\Title\AddTitle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

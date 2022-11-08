@@ -19,7 +19,10 @@ namespace EntityLayer.Concrete
         public string Description { get; set; }
         public bool Status { get; set; }
 
+        [StringLength(20)]
+        public string Color { get; set; }
 
-        public ICollection<Tittle> Tittles { get; set; }
+
+        public ICollection<Title> Titles { get; set; }
     }
 }

@@ -20,9 +20,14 @@
         @Html.Label("Açıklama")
         @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
         <br />
-
-        <button class="btn btn-info">Kaydet</button>
+        @Html.Label("Kategori Rengi")
+        <br />
+        @Html.TextBoxFor(x => x.Color, new { @class = "form-control-color", @type = "color"})
+        <br />
+        <button class="btn btn-info mt-3">Kaydet</button>
 
     }
 </div>
+
+
 

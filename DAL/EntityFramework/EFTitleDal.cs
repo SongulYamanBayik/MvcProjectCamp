@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.EntityFramework
 {
-   public class EFTittleDal:GenericRepository<Tittle>,ITittleDal
+   public class EFTitleDal:GenericRepository<Title>,ITitleDal
     {
     }
 }

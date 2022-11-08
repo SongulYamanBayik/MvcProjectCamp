@@ -14,7 +14,7 @@ namespace DAL.Concrete
         public DbSet<Category> Categories { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Content> Contents { get; set; }
-        public DbSet<Tittle> Tittles { get; set; }
+        public DbSet<Title> Titles { get; set; }
         public DbSet<Writer> Writers { get; set; }
     }
 }

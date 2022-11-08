@@ -17,8 +17,8 @@ namespace EntityLayer.Concrete
         public DateTime Date { get; set; }
 
 
-        public virtual Tittle Tittle { get; set; }
-        public int TittleID { get; set; }
+        public virtual Title Title { get; set; }
+        public int TitleID { get; set; }
 
         public virtual Writer Writer { get; set; }
         public int? WriterID { get; set; }

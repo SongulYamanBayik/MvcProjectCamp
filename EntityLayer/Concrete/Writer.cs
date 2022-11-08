@@ -18,7 +18,7 @@ namespace EntityLayer.Concrete
         [StringLength(50)]
         public string Surname { get; set; }
 
-        [StringLength(100)]
+        [StringLength(500)]
         public string Image { get; set; }
         
         [StringLength(100)]
@@ -33,7 +33,7 @@ namespace EntityLayer.Concrete
         [StringLength(200)]
         public string Password { get; set; }
 
-        public ICollection<Tittle> Tittles { get; set; }
+        public ICollection<Title> Titles { get; set; }
 
         public ICollection<Content> Contents { get; set; }
     }
