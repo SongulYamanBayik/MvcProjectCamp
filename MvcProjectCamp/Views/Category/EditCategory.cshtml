@@ -11,18 +11,21 @@
 
     @using (Html.BeginForm("EditCategory", "Category", FormMethod.Post))
     {
-        @Html.Label("ID")
-        @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+        @Html.HiddenFor(x => x.ID)
         <br />
         @Html.Label("Kategori Adı")
         @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Name)
+
         <br />
         @Html.Label("Açıklama")
         @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Description)
+
         <br />
         @Html.Label("Kategori Rengi")
         <br />
-        @Html.TextBoxFor(x => x.Color, new { @class = "form-control-color", @type = "color"})
+        @Html.TextBoxFor(x => x.Color, new { @class = "form-control-color", @type = "color" })
         <br />
         <button class="btn btn-info mt-3">Kaydet</button>
 

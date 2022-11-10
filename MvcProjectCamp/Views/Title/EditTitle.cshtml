@@ -1,6 +1,6 @@
 ﻿@model EntityLayer.Concrete.Title
 @{
-    ViewBag.Title = "AddTitle";
+    ViewBag.Title = "EditTitle";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -9,11 +9,14 @@
 <!DOCTYPE html>
 <div class="container col-10" style="margin-top:40px">
 
-    @using (Html.BeginForm("AddTitle", "Title", FormMethod.Post))
+    @using (Html.BeginForm("EditTitle", "Title", FormMethod.Post))
     {
-
+        @Html.HiddenFor(x => x.ID)
+        <br />
         @Html.Label("Başlık Adı")
         @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <br />
+        @Html.Label("Tarih")
         <br />
         @Html.Label("Kategori")
         @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.slc, new { @class = "form-control" })
@@ -21,9 +24,13 @@
         @Html.Label("Yazar")
         @Html.DropDownListFor(x => x.WriterID, (List<SelectListItem>)ViewBag.slw, new { @class = "form-control" })
         <br />
+        <div style="float: left; padding-right: 10px;">
+            @Html.TextBoxFor(x => x.Date, "{0:MM/dd/yyyy}", new { maxlength = "12", size = "16", @class = "date-picker dateRegion" })
+        </div>
+        <br />
+        <br />
         <button class="btn btn-info">Kaydet</button>
 
     }
 </div>
-
 

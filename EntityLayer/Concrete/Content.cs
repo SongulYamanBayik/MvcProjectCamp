@@ -15,6 +15,8 @@ namespace EntityLayer.Concrete
         [StringLength(1000)]
         public string Value { get; set; }
         public DateTime Date { get; set; }
+        public bool Status { get; set; }
+
 
 
         public virtual Title Title { get; set; }

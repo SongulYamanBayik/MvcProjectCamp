@@ -14,10 +14,11 @@ namespace MvcProjectCamp.Controllers
     public class CategoryController : Controller
     {
         CategoryManager categoryManager = new CategoryManager(new EFCategoryDal());
+        CategoryValidator categoryValidator = new CategoryValidator();
         // GET: Category
         public ActionResult Index()
         {
-            var value = categoryManager.TList();
+            var value = categoryManager.TList(x=>x.Status==true);
             return View(value);
         }
 
@@ -30,10 +31,10 @@ namespace MvcProjectCamp.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category category)
         {
-            CategoryValidator categoryValidator = new CategoryValidator();
             ValidationResult validationResult = categoryValidator.Validate(category);
             if (validationResult.IsValid)
             {
+                category.Status = true;
                 categoryManager.TInsert(category);
                 return RedirectToAction("Index");
             }
@@ -50,6 +51,7 @@ namespace MvcProjectCamp.Controllers
         public ActionResult DeleteCategory(int id)
         {
             var value = categoryManager.GetByID(id);
+            value.Status = false;
             categoryManager.TDelete(value);
             return RedirectToAction("Index");
         }
@@ -64,8 +66,21 @@ namespace MvcProjectCamp.Controllers
         [HttpPost]
         public ActionResult EditCategory(Category category)
         {
-            categoryManager.TUpdate(category);
-            return RedirectToAction("Index");
+            ValidationResult validationResult = categoryValidator.Validate(category);
+            if (validationResult.IsValid)
+            {
+                category.Status = true;
+                categoryManager.TUpdate(category);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in validationResult.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace DAL.Repositories
         public void Delete(T t)
         {
             var deletedEntity = context.Entry(t);
-            deletedEntity.State = EntityState.Deleted;
+            deletedEntity.State = EntityState.Modified;
             context.SaveChanges();
         }
 

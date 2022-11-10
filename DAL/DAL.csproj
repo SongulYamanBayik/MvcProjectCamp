@@ -89,6 +89,10 @@
     <Compile Include="Migrations\202211081216454_update-ımage-length.designer.cs">
       <DependentUpon>202211081216454_update-ımage-length.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211091000172_add-status.cs" />
+    <Compile Include="Migrations\202211091000172_add-status.designer.cs">
+      <DependentUpon>202211091000172_add-status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
@@ -121,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211081216454_update-ımage-length.resx">
       <DependentUpon>202211081216454_update-ımage-length.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211091000172_add-status.resx">
+      <DependentUpon>202211091000172_add-status.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

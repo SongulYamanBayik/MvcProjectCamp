@@ -2283,6 +2283,7 @@
     <Content Include="Views\Writer\EditWriter.cshtml" />
     <Content Include="Views\Title\Index.cshtml" />
     <Content Include="Views\Title\AddTitle.cshtml" />
+    <Content Include="Views\Title\EditTitle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
